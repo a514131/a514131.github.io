@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>CloudRePo图像云端处理</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="css/colors.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Customer Login</h4>
+			</div>
+			<div class="modal-body customer-box row">
+				<div class="col-md-12">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+						<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="Login">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Submit
+									</button>
+									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="tab-pane" id="Registration">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Save &amp; Continue
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Cancel</button>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loading">
+			<div class="finger finger-1">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-2">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-3">
+				<div class="finger-item">
+				  <span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-4">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="last-finger">
+				<div class="last-finger-item"><i></i></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img style="width: 50px;height: 50px;" src="images/logos/logo4.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">主页</a></li>
+                        <li><a class="active" href="features.html">介绍 </a></li>
+                        <!--<li><a href="domain.html">Domain</a></li>
+                        <li><a href="hosting.html">Hosting</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>-->
+                        <li><a href="testimonials.html">团队</a></li>
+                        <li><a href="contact.html">反馈</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="btn-light btn-radius btn-brd log" href="#" data-toggle="modal" data-target="#login"><i class="flaticon-padlock"></i>Professor Ou Yang</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>介绍<span class="m_1">用视频讲解图像处理功能的使用</span></h1>
+		</div>
+	</div>
+	
+    <div id="hosting" class="section wb" style="background: rgb(248, 248, 248)">
+        <div class="container">
+            <!--<div class="section-title text-center">
+                <h3>Hosting Packages</h3>
+                <p class="lead">All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, true generator<br> on the Internet. It uses a dictionary of over..</p>
+            </div><!-- end title -->-->
+
+            <div class="row dev-list text-center">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="widget clearfix">
+                        <img src="uploads/small1.jpg" alt="" class="img-responsive">
+                        <div class="widget-title">
+                            <h3>图像修复</h3>
+                            <small>Image inpainting</small>
+                        </div>
+                        <!-- end title -->
+                        <p>图像修复功能利用ImageNet数据集，设计VGG16与GAN结合的局部信息缺失的人脸修复算法。通过VGG16对人脸部分进行识别、剪除、缩放，将其输入至GAN中，通过生成器和鉴别器的不断博弈提高模型修复图像的能力。实现输入一张有缺损的图片，指定缺损区域的位置，自动修复缺损部分。PSNR 为25.21，SSIM为0.86，在掩模区域并非很大且较分散的情况下，能获得很好效果。</p>
+
+
+
+                        <hr>
+
+                        <a href="#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">详情</a>
+
+                    </div><!--widget -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="widget clearfix">
+                        <img src="uploads/small2.jpg" alt="" class="img-responsive">
+                        <div class="widget-title">
+                            <h3>超分辨率重建</h3>
+                            <small>Super resolution reconstruction</small>
+                        </div>
+                        <!-- end title -->
+                        <p>图像超分辨率重建功能利用CelebA数据集合成低分辨率、有噪声的输入图像以形成训练/测试对，设计SRGAN网络模型结构及损失函数进行训练生成具有逼真视觉效果的高分辨率图像。取训练层数16000次效果最佳，PSNR 达32.91，SSIM指标高达0.9999，基本实现无损放大。</p>
+
+
+                        <hr>
+
+                        <a href="#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">详情</a>
+
+                    </div><!--widget -->
+                </div><!-- end col -->
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="widget clearfix">
+                        <img src="uploads/small3.jpg" alt="" class="img-responsive">
+                        <div class="widget-title">
+                            <h3>自动上色</h3>
+                            <small>Automatic coloring</small>
+                        </div>
+                        <!-- end title -->
+                        <p>图像自动上色功能利用COCO-Stuff数据集给定的灰度图像X作为输入，使用对象检测模型检测对象并裁剪生成一组实例图像。将每个实例图像Xi和输入灰度图像X分别送到实例着色网络和全图像着色网络进行训练，而后将每层中所有实例特征映射与全图像特征映射融合，最终输出彩色图像Y。LPIPS为0.115，PSNR为28.339，SSIM为0.929，较之其它算法，上色效果、性能全面显著提升。</p>
+
+
+                        <hr>
+
+                        <a href="#pricing" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">详情</a>
+
+                    </div><!--widget -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+	<div id="pricing" class="section cl">
+		<div class="container">
+
+            <div class="section-title text-center">
+                <h3 style="color: #fff;">各个模块使用次数</h3>
+            </div><!-- end title -->
+            
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span>
+					<p class="stat_count">37</p>
+					<h3>图像修复</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span>
+					<p class="stat_count">45</p>
+					<h3>超分辨率重建</h3>
+				</div><!-- end col -->
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span>
+					<p class="stat_count">66</p>
+					<h3>自动上色</h3>
+				</div><!-- end col -->
+			</div><!-- end row -->
+		</div><!-- end container -->
+	</div><!-- end section -->
+
+    <div id="pricing" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>愈加完善</h3>
+                <p class="lead">在客户的意见反馈下，我们将会实现除了以上三种功能外的其他功能，将会逐渐成为一款以AI图像处理为基础的，好玩的网站</p>
+            </div><!-- end title -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+    <section class="section nopad cac text-center">
+        <a href="#"><h3></h3></a>
+    </section>
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+</body>
+</html>

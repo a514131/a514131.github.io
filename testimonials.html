@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>CloudRePo图像云端处理</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="css/colors.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Professor Ou Yang</h4>
+			</div>
+			<div class="modal-body customer-box row">
+				<div class="col-md-12">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+						<li><a href="#Registration" data-toggle="tab">Registration</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="Login">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Submit
+									</button>
+									<a class="for-pwd" href="javascript:;">Forgot your password?</a>
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="tab-pane" id="Registration">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Save &amp; Continue
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Cancel</button>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loading">
+			<div class="finger finger-1">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-2">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-3">
+				<div class="finger-item">
+				  <span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-4">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="last-finger">
+				<div class="last-finger-item"><i></i></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img style="width: 50px;height: 50px;" src="images/logos/logo4.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">主页</a></li>
+                        <li><a href="features.html">介绍 </a></li>
+                        <!--<li><a href="domain.html">Domain</a></li>
+                        <li><a href="hosting.html">Hosting</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>-->
+                        <li><a class="active" href="testimonials.html">团队</a></li>
+                        <li><a href="contact.html">反馈</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="btn-light btn-radius btn-brd log" href="#" data-toggle="modal" data-target="#login"><i class="flaticon-padlock"></i>Professor Ou Yang</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>团队<span class="m_1">6名网站以及项目创始人及其介绍</span></h1>
+		</div>
+	</div>
+	
+    <div id="testimonial-box" class="section wb">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="testimonial clearfix">
+						<div class="desc">
+							<h3><i class="fa fa-quote-left"></i> Professor Ou Yang</h3>
+							<p class="lead">项目组组长，负责服务器架设与运维，图像修复模块开发，系统架构设计，统筹全局进度</p>
+						</div>
+						<div class="testi-meta">
+							<img src="uploads/1.jpg" alt="" class="img-responsive alignleft">
+							<h4>James Fernando <small>- Professor Ou Yang</small></h4>
+						</div>
+						<!-- end testi-meta -->
+					</div>
+					<!-- end testimonial -->
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="testimonial clearfix">
+						<div class="desc">
+							<h3><i class="fa fa-quote-left"></i> Super Lee</h3>
+							<p class="lead">负责PC端开发、PC应用前后端的连接，超分辨率重建模块的开发,对各个模块就行优化并就行整合</p>
+						</div>
+						<div class="testi-meta">
+							<img src="uploads/2.jpeg" alt="" class="img-responsive alignleft">
+							<h4>Jacques Philips <small>- Super Lee</small></h4>
+						</div>
+						<!-- end testi-meta -->
+					</div>
+					<!-- end testimonial -->
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="testimonial clearfix">
+						<div class="desc">
+							<h3><i class="fa fa-quote-left"></i>Vickyi</h3>
+							<p class="lead">负责需求分析，写规格说明书以及项目的计划，对接组长和组员，用户画像，超分辨率重建模块的开发，</p>
+						</div>
+						<div class="testi-meta">
+							<img src="uploads/3.jpg" alt="" class="img-responsive alignleft">
+							<h4>Venanda Mercy <small>- Vickyi</small></h4>
+						</div>
+						<!-- end testi-meta -->
+					</div>
+					<!-- end testimonial -->
+				</div>
+			</div>
+			<hr class="hr3">
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="testimonial clearfix">
+						<div class="desc">
+							<h3><i class="fa fa-quote-left"></i> Little Tomato</h3>
+							<p class="lead">负责服务器与网页端的连接，图像修复模块的构建与开发，负责部分网页端的设计与开发</p>
+						</div>
+						<div class="testi-meta">
+							<img src="uploads/4.jpeg" alt="" class="img-responsive alignleft">
+							<h4>James Fernando <small>- Little Tomato</small></h4>
+						</div>
+						<!-- end testi-meta -->
+					</div>
+					<!-- end testimonial -->
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="testimonial clearfix">
+						<div class="desc">
+							<h3><i class="fa fa-quote-left"></i>Stupid GG</h3>
+							<p class="lead">负责自动上色的需求分析，对自动上色的论文以及项目收集，同时对自动上色模块的算法继续优化</p>
+						</div>
+						<div class="testi-meta">
+							<img src="uploads/5.jpg" alt="" class="img-responsive alignleft">
+							<h4>Jacques Philips <small>- Stupid GG</small></h4>
+						</div>
+						<!-- end testi-meta -->
+					</div>
+					<!-- end testimonial -->
+				</div>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="testimonial clearfix">
+						<div class="desc">
+							<h3><i class="fa fa-quote-left"></i>Good Name</h3>
+							<p class="lead">负责图像上色模块的模型建立，以及项目训练，同时担任项目前端的设计，以及云端后台的部署</p>
+						</div>
+						<div class="testi-meta">
+							<img src="uploads/6.jpg" alt="" class="img-responsive alignleft">
+							<h4>Venanda Mercy <small>- Good Name</small></h4>
+						</div>
+						<!-- end testi-meta -->
+					</div><!-- end testimonial -->
+				</div>
+			</div>
+		</div>
+    </div><!-- end section -->
+
+
+
+    <section class="section nopad cac text-center">
+        <a href="#"><h3></h3></a>
+    </section>
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
