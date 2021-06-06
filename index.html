@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>CloudRePo图像云端处理</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/logos/logo3.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="css/colors.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" id="close" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">登录</h4>
+			</div>
+			<div class="modal-body customer-box row">
+				<div class="col-md-12">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#Login" data-toggle="tab">登录</a></li>
+						<li><a href="#Registration" data-toggle="tab">注册</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="Login">
+							<div class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="昵称" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="邮箱" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1" onclick="login()">
+										登录
+									</button>
+									<a class="for-pwd" href="javascript:;">忘记密码？</a>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="Registration">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Save &amp; Continue
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Cancel</button>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loading">
+			<div class="finger finger-1">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-2">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-3">
+				<div class="finger-item">
+				  <span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-4">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="last-finger">
+				<div class="last-finger-item"><i></i></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img style="width: 50px;height: 50px;" src="images/logos/logo4.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="active" href="index.html">主页</a></li>
+                        <li><a href="features.html">介绍 </a></li>
+                        <!--<li><a href="domain.html">Domain</a></li>
+                        <li><a href="hosting.html">Hosting</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>-->
+                        <li><a href="testimonials.html">团队</a></li>
+                        <li><a href="contact.html">反馈</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="btn-light btn-radius btn-brd log" href="#" data-toggle="modal" data-target="#login"><i id="uname" class="flaticon-padlock">登录</i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<div id="home" class="first-section" style="background-image:url('uploads/max1.jpg');">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="big-tagline">
+									<img style="width: 150px;height: 150px;" src="images/logos/logo4.png" alt="image">
+									<h2 data-animation="animated zoomInRight">图像 <strong> 修复</strong> 模块</h2>
+									<!--<p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>-->
+									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">云上空间</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">图像处理</a>
+								</div>
+							</div>
+						</div><!-- end row -->            
+					</div><!-- end container -->
+				</div><!-- end section -->
+			</div>
+			<div class="item">
+				<div id="home" class="first-section" style="background-image:url('uploads/max2.jpg');">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="big-tagline">
+									<img style="width: 150px;height: 150px;" src="images/logos/logo4.png" alt="image">
+									<h2 data-animation="animated zoomInRight">超分辨率  <strong>重建</strong></h2>
+									<!--<p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive landing page template, you can promote your all hosting, domain and email services. </p>-->
+									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">云上空间</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">图像处理</a>
+								</div>
+							</div>
+						</div><!-- end row -->            
+					</div><!-- end container -->
+				</div><!-- end section -->
+			</div>
+			<div class="item">
+				<div id="home" class="first-section" style="background-image:url('uploads/max3.jpg');">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="big-tagline">
+									<img style="width: 150px;height: 150px;" src="images/logos/logo4.png" alt="image">
+									<h2 data-animation="animated zoomInRight">图像自动 <strong> 上色</strong></h2>
+									<!--<p class="lead" data-animation="animated fadeInLeft">1 IP included with each server (more on request to justification)
+										Your Choice of any OS (CentOS, Windows, Debian, Fedora)
+										FREE Reboots</p>-->
+									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">云上空间</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">图像处理</a>
+								</div>
+							</div>
+						</div><!-- end row -->            
+					</div><!-- end container -->
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+			<div class="row">
+				
+			
+	            <div class="col-md-6 col-md-offset-3">
+	
+	                    <div class="message-box">
+		                    <ul class="nav nav-pills nav-stacked" id="myTabs">
+		                        <li class="active"><a href="#tab4" onclick="inpaint()" data-toggle="pill">图像修复</a></li>
+		                        <li><a href="#tab5" onclick="resolve()" data-toggle="pill">超分辨率重建</a></li>
+		                        <li><a href="#tab6" onclick="color()" data-toggle="pill">自动上色</a></li>
+		                    </ul>
+	                    </div>
+	            </div><!-- end col -->
+            </div>
+            
+            <hr class="invis"> 
+			<div class="row">
+	                    <div class="tab-content message-box col-md-6">
+							<div class="input-group">
+							    <input id="test1" type="file" class="form-control hidden"  onchange="btnUploadFile(event)">
+							    <a  class="btn btn-light btn-radius btn-brd grd1 effect-1" onclick="document.getElementById('test1').click()">选择图片</a>
+							    <!--<input id="test2" type="button" class="btn btn-default form-control" value="请选择文件" onclick="document.getElementById('test1').click()">-->
+							</div>
+		                    <div class="tab-pane active fade in " id="tab4">
+		                    	
+
+									
+
+									<br> 
+									颜色:
+										<input type="hidden" id="hid_color" value="red"/>
+										
+										<input type="button" value="black" class="btn btn-success" name="btn_color"/>
+										<input type="button" value="red" class="btn btn-danger" name="btn_color"/>
+										<input type="button" value="blue" class="btn btn-primary" name="btn_color"/>
+
+		
+									
+									大小:
+									<input type="radio" value="2" name="rad_size" checked="checked"/>2
+									<input type="radio" value="5" name="rad_size"/>5
+									<input type="radio" value="10" name="rad_size"/>10
+									
+									<!--<input type="button" value="Clear" id="btn_clear">-->
+			
+	
+									<div>
+										亮度：<span id="value"> 0</span><input id="range" type="range" width="200px" min="-1" max="1" step="0.1" value="0" onchange="change()" />
+									</div>
+		
+									<div>
+										对比度：<span id="radio_value"> 0</span><input id="radio_range" type="range" width="200px" min="-1" max="1" step="0.1" value="0" onchange="change()" />
+									</div>
+
+
+		                    </div><!-- end messagebox -->
+		
+		
+		                    <div class="tab-pane  fade " id="tab5">
+		                        
+
+	
+									<div>
+										亮度：<span id="value"> 0</span><input id="range" type="range" width="200px" min="-1" max="1" step="0.1" value="0" onchange="change()" />
+									</div>
+		
+									<div>
+										对比度：<span id="radio_value"> 0</span><input id="radio_range" type="range" width="200px" min="-1" max="1" step="0.1" value="0" onchange="change()" />
+									</div>
+		
+		                    </div><!-- end messagebox -->
+		
+		                    <div class="tab-pane  fade " id="tab6">
+		                        
+	
+	
+									<div>
+										亮度：<span id="value"> 0</span><input id="range" type="range" width="200px" min="-1" max="1" step="0.1" value="0" onchange="change()" />
+									</div>
+		
+									<div>
+										对比度：<span id="radio_value"> 0</span><input id="radio_range" type="range" width="200px" min="-1" max="1" step="0.1" value="0" onchange="change()" />
+									</div>
+		                    </div><!-- end messagebox -->
+	                        
+	                       
+	                    </div>
+	                    <div class="col-md-6">
+							
+		                    <a  class="btn btn-light btn-radius btn-brd grd1 effect-1" onclick="repair()">处理图像</a>
+	                    </div>
+					</div>
+            <hr class="invis"> 
+			<div class="row">
+                <div class="col-md-6">
+                	
+
+                    <!--<a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1" href="javascript:void(0)" οnclick="fn(this)">选择图片</a>
+                    <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1" href="javascript:void(0)" οnclick="save(this)">选择图片</a>-->
+                    <canvas id="canvas" width="500" height="500" style="border:1px solid #c3c3c3;"></canvas>
+                    
+					<div style="display: none;">
+						<canvas id="hidden_canvas" width="500" height="500"></canvas>
+					</div>
+
+						<a  class="btn btn-light btn-radius btn-brd grd1 effect-1" id="btn_clear">清楚涂鸦</a>	
+						<a  class="btn btn-light btn-radius btn-brd grd1 effect-1" onclick="flip()">镜像</a>
+				<!--		<a  class="btn btn-light btn-radius btn-brd grd1 effect-1" >查看</a>-->
+						
+                </div><!-- end col -->
+				
+				<div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <!--<img src="uploads/about_02.jpg" alt="" class="img-responsive img-rounded">-->
+                        
+                        <!--<canvas  id="canvas" class="img-responsive img-rounded" style="border:1px solid #c3c3c3;"></canvas>-->
+
+						
+						<div class="hidden_result">
+							<canvas id="img" width="500" height="500"></canvas>
+							<a  class="btn btn-light btn-radius btn-brd grd1 effect-1" onclick="flip_result()">镜像</a>
+							<a  class="btn btn-light btn-radius btn-brd grd1 effect-1" onclick="save()" >云上保存</a>
+							<!--<a  class="btn btn-light btn-radius btn-brd grd1 effect-1" >查看</a>-->
+						</div>
+                        <!--<a href="uploads/about_02.jpg" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>-->
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <hr class="invis"> 
+
+
+            
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    
+   
+
+    <div id="pricing" class="section lb">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li class="active"><a href="#tab1" data-toggle="pill">图像修复</a></li>
+                            <li><a href="#tab2" data-toggle="pill">超分辨率重建</a></li>
+                            <li><a href="#tab3" data-toggle="pill">自动上色</a></li>
+                        </ul>
+                    </div>
+                </div><!-- end col -->
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade in" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>修复前</h2>
+                                        </div>
+                                        <div class="pricing-table-space">
+                                        </div>
+                                        <div class="pricing-table-features" id="repair_hidden">
+                                        	<img id="before_repair_2" src="images/1.jpg" alt="" class="img-responsive">
+                                        	<a href="images/1.jpg" id="before_repair_look_2" data-rel="prettyPhoto[gal]" class="playbutton">
+                                        		<i class="flaticon-play-button"></i>
+                                        	</a>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a id="before_repair_save_2" href="images/1.jpg" download="before_repair" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">保存</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>修复后</h2>
+                                        </div>
+                                        <div class="pricing-table-space">
+                                        </div>
+                                        <div class="pricing-table-text" id="repair_hidden">
+                                        </div>
+                                        <div class="pricing-table-features" id="repair_hidden">
+                                        	<img id="after_repair_2" src="images/2.jpg" alt="" class="img-responsive">
+                                        	<a href="images/2.jpg" id="after_repair_look_2"  data-rel="prettyPhoto[gal]" class="playbutton">
+                                        		<i class="flaticon-play-button"></i>
+                                        	</a>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a id="after_repair_save_2" href="images/2.jpg" download="after_repair" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">保存</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>修复前</h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                        	<img id="before_repair_3" src="images/small.jpg" alt="" class="img-responsive">
+                                        	<a href="images/small.jpg" id="before_repair_look_3" data-rel="prettyPhoto[gal]" class="playbutton">
+                                        		<i class="flaticon-play-button"></i>
+                                        	</a>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a id="before_repair_save_3" href="images/small.jpg" download="before_repair" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">保存</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>修复后</h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-text">
+                                        </div>
+                                        <div class="pricing-table-features">
+                                        	<img id="after_repair_3" src="images/big.jpg" alt="" class="img-responsive">
+                                        	<a href="images/big.jpg" id="after_repair_look_3" data-rel="prettyPhoto[gal]" class="playbutton">
+                                        		<i class="flaticon-play-button"></i>
+                                        	</a>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a id="after_repair_save_3" href="images/big.jpg" download="after_repair" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">保存</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                    
+                        <div class="tab-pane fade" id="tab3">
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>修复前</h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                        	<img id="before_repair_1" src="#" alt="" class="img-responsive">
+                                        	<a href="#" id="before_repair_look_1" data-rel="prettyPhoto[gal]" class="playbutton">
+                                        		<i class="flaticon-play-button"></i>
+                                        	</a>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a id="before_repair_save_1" href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">保存</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>修复后</h2>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-text">
+                                        </div>
+                                        <div class="pricing-table-features">
+                                        	<img id="after_repair_1" src="#" alt="" class="img-responsive">
+                                        	<a href="#" id="after_repair_look_1" data-rel="prettyPhoto[gal]" class="playbutton">
+                                        		<i class="flaticon-play-button"></i>
+                                        	</a>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a id="after_repair_save_1" href="#contact" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">保存</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end row -->
+                        </div><!-- end pane -->
+                        
+                    </div><!-- end content -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+  
+
+
+
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
